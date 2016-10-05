@@ -1,7 +1,9 @@
 import { Component } from "@angular/core";
+
 @Component({
+  moduleId: module.id,
   selector: "gs-app",
-  template: "<h1>Greater Sum Angular2 Seed</h1>"
+  templateUrl: "app.component.html"
 })
 
 export class AppComponent {}

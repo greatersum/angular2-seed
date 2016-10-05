@@ -8,6 +8,7 @@ describe("test", () => {
     TestBed.configureTestingModule({
       declarations: [AppComponent]
     });
+    TestBed.compileComponents();
   }));
 
   it("should test setup", () => {

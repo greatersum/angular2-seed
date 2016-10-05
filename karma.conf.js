@@ -15,7 +15,9 @@ module.exports = function (config) {
       {pattern: "node_modules/@angular/**/*.js", included: false, watched: false},
       {pattern: "systemjs.config.js", included: false, watched: false},
       "karma-test-shim.js",
-      {pattern: "app/*.js", included: false, watched: true}
+      {pattern: "app/*.js", included: false, watched: true},
+      {pattern: "app/*.html", included: false, watched: true},
+      {pattern: "app/*.css", included: false, watched: true}
     ],
     frameworks: ["jasmine"],
     browsers: ["PhantomJS"]
