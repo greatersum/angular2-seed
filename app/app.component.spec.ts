@@ -4,7 +4,7 @@ import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
 
 describe("test", () => {
-  beforeEach(async(()=> {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AppComponent]
     });
