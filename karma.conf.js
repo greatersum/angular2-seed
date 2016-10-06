@@ -20,6 +20,20 @@ module.exports = function (config) {
       {pattern: "app/*.css", included: false, watched: true}
     ],
     frameworks: ["jasmine"],
+    reporters: ["progress", "coverage", "karma-remap-istanbul"],
+    coverageReporter: {
+      type: "json",
+      subdir: ".",
+      file: 'coverage-final.json'
+    },
+    remapIstanbulReporter: {
+      src: 'coverage/coverage-final.json',
+      reports: {
+        html: 'coverage'
+      },
+      timeoutNotCreated: 1000,
+      timeoutNoMoreFiles: 1000
+    },
     browsers: ["PhantomJS"]
   });
 };
