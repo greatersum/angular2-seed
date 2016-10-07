@@ -15,12 +15,17 @@ module.exports = function (config) {
       {pattern: "node_modules/@angular/**/*.js", included: false, watched: false},
       {pattern: "systemjs.config.js", included: false, watched: false},
       "karma-test-shim.js",
-      {pattern: "app/*.js", included: false, watched: true},
-      {pattern: "app/*.html", included: false, watched: true},
-      {pattern: "app/*.css", included: false, watched: true}
+      {pattern: "app/**/*.js", included: false, watched: true},
+      {pattern: "app/**/*.ts", included: false, watched: true},
+      {pattern: "app/**/*.map", included: false, watched: false},
+      {pattern: "app/**/*.html", included: false, watched: true},
+      {pattern: "app/**/*.css", included: false, watched: true}
     ],
     frameworks: ["jasmine"],
     reporters: ["progress", "coverage", "karma-remap-istanbul"],
+    preprocessors: {
+      "app/**/!(*spec).js": ['sourcemap', 'coverage']
+    },
     coverageReporter: {
       type: "json",
       subdir: ".",
